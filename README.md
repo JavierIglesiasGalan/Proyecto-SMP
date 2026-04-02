@@ -79,7 +79,7 @@ Plataforma de monitorización de servidores desarrollada en Python que permite v
 ### 1️⃣ Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/server-monitoring-platform.git
+git clone https://github.com/JavierIglesiasGalan/server-monitoring-platform.git
 cd server-monitoring-platform
 ```
 
