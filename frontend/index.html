@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Monitoring Dashboard</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #alertBox {
+            display: none;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        select {
+            margin-bottom: 20px;
+            padding: 5px;
+        }
+
+        canvas {
+            background: white;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>📊 Server Monitoring Dashboard</h1>
+
+<div id="alertBox"></div>
+
+<label for="serverSelect">Select Server:</label>
+<select id="serverSelect"></select>
+
+<canvas id="cpuChart"></canvas>
+<canvas id="ramChart"></canvas>
+<canvas id="diskChart"></canvas>
+
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,12 +1,23 @@
 from fastapi import FastAPI
-from app.routes import users, servers, metrics
+from app.core.database import Base, engine
+from app.routes import servers
+from app.routes import metrics
+from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Server Monitoring API")
+app = FastAPI(title="Server Monitoring Platform")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # en producción se restringe
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-app.include_router(users.router)
+Base.metadata.create_all(bind=engine)
+
 app.include_router(servers.router)
 app.include_router(metrics.router)
 
 @app.get("/")
 def root():
-    return {"message": "API running"}
+    return {"status": "running"}
