@@ -215,11 +215,11 @@ docker-compose build frontend
 ---
 ## 🔥 Mejoras futuras
 
-🔐 Autenticación (JWT)
-⚡ WebSockets (tiempo real real)
-☁️ Despliegue en cloud (AWS, Render, etc.)
-📊 Estadísticas avanzadas
-🔔 Sistema de notificaciones
+* 🔐 Autenticación (JWT)
+* ⚡ WebSockets (tiempo real real)
+* ☁️ Despliegue en cloud (AWS, Render, etc.)
+* 📊 Estadísticas avanzadas
++ 🔔 Sistema de notificaciones
 
 ---
 
